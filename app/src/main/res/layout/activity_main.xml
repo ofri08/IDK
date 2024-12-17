@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- שאלה -->
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question will appear here"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <!-- תוצאה (הודעה על תשובה נכונה/שגויה) -->
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result will appear here"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:layout_below="@id/questionTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- מקום להצגת כפתורי תשובות -->
+    <LinearLayout
+        android:id="@+id/answersContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/resultTextView"
+        android:layout_marginTop="16dp"
+        android:gravity="center"/>
+
+    <!-- כפתור לשינוי מספר האופציות -->
+    <Button
+        android:id="@+id/changeOptionsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Options"
+        android:textSize="18sp"
+        android:layout_below="@id/answersContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"/>
+
+    <!-- TextView להראות את כמות השאלות שנענו נכון מתוך כל השאלות -->
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correct Answers: 0 / 0"
+        android:textSize="18sp"
+        android:layout_below="@id/changeOptionsButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+</RelativeLayout>
